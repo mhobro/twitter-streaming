@@ -2,6 +2,7 @@ require('dotenv').config();
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var util = require('util');
 
 var twitterAPI = require('twitter');
 var twitter = new twitterAPI({
@@ -21,4 +22,14 @@ app.use('/angular', express.static(__dirname + '/node_modules/angular/'));
 
 app.listen(process.env.PORT, function () {
   console.log('Edward Blom listening on port ' + process.env.PORT + '!');
+});
+
+app.post('/twitterstream', function (req, res) {
+  console.log("hej");
+  //var track = req.body.filter;
+	twitter.stream('statuses/filter', {track: 'Zlatan'}, function (stream) {
+	    stream.on('data', function(data){
+        console.log(util.inspect(data));
+      });
+	});
 });
