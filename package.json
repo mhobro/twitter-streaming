@@ -1,0 +1,26 @@
+{
+  "name": "twitter-streaming",
+  "version": "1.0.0",
+  "description": "Streaming tweets with the Twitter API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhobro/twitter-streaming.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mhobro/twitter-streaming/issues"
+  },
+  "dependencies": {
+    "twitter": "~1.2.5",
+    "express": "~4.13.4",
+    "angular": "~1.5.5",
+    "dotenv": "~2.0.0",
+    "bootstrap": "~3.3.6",
+    "body-parser": "~1.15.0"
+  }
+}
